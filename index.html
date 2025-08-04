@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szilard2011 // Chimera OS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Fira+Code&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="cyberpunk">
+
+    <div id="crt-overlay"></div>
+    <div id="starfield1"></div>
+    <div id="starfield2"></div>
+    <div id="starfield3"></div>
+
+    <div id="cursor-dot"></div>
+    <div id="cursor-circle"></div>
+
+    <div id="preloader"><div id="preloader-text">> Booting Chimera OS...</div></div>
+    
+    <div id="desktop">
+        <div class="window" id="window-about" style="top: 10%; left: 15%;"><div class="title-bar"><span class="title">README.txt</span><button class="close-btn" data-window="window-about">×</button></div><div class="content"><h2>// Status Report</h2><p>My name is Szilárd. This OS is my personal playground, a hybrid of a graphical user interface and a command-line terminal, running on a retro-futuristic core.</p></div></div>
+        <div class="window" id="window-passions" style="top: 20%; left: 45%;"><div class="title-bar"><span class="title">Core_Directives.log</span><button class="close-btn" data-window="window-passions">×</button></div><div class="content"><h2>// Directives</h2><div class="passions-grid"><div class="card"><h3>Coding</h3><p>Building realities from pure logic.</p></div><div class="card"><h3>Gaming</h3><p>Exploring the realities others have built.</p></div><div class="card"><h3>Lore</h3><p>Deconstructing the hidden narratives within those realities.</p></div></div></div></div>
+        <div class="window" id="window-contact" style="display: none; top: 50%; left: 25%;"><div class="title-bar"><span class="title">Connection_Protocol.exe</span><button class="close-btn" data-window="window-contact">×</button></div><div class="content"><h2>// Establish Link</h2><p>My primary node for all public projects is GitHub. Access is granted.</p><a href="https://github.com/Szilard2011" target="_blank" class="button">Access GitHub Archives</a></div></div>
+        <div class="window" id="window-terminal" style="top: 15%; left: 5%;"><div class="title-bar"><span class="title">ChimeraCMD</span><button class="close-btn" data-window="window-terminal">×</button></div><div class="content terminal-content" id="terminal-content"><div id="terminal-output"></div><div class="terminal-prompt"><span class="prompt-user">user@chimera</span><span class="prompt-symbol">:~$</span><input type="text" id="terminal-input" autocomplete="off" autofocus></div></div></div>
+    </div>
+
+    <nav id="dock">
+        <div class="dock-group">
+            <button class="dock-item" data-window="window-terminal" title="Terminal"><span class="icon icon-terminal"></span></button>
+            <button class="dock-item" data-window="window-about" title="About Me"><span class="icon icon-about"></span></button>
+            <button class="dock-item" data-window="window-passions" title="Passions"><span class="icon icon-passions"></span></button>
+            <button class="dock-item" data-window="window-contact" title="Contact"><span class="icon icon-contact"></span></button>
+        </div>
+        <div class="dock-group-right">
+            <button id="theme-switcher" class="dock-item" title="Switch Theme"><span class="icon icon-theme"></span></button>
+            <div id="clock" class="dock-item-static">00:00:00</div>
+        </div>
+    </nav>
+    
+    <audio id="click-sound" src="click.mp3"></audio>
+    <audio id="ambient-sound" src="ambience.mp3" loop></audio>
+    <audio id="type-sound" src="type.mp3"></audio>
+    <audio id="error-sound" src="error.mp3"></audio>
+    
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
